@@ -1,9 +1,13 @@
 package com.myjo.crawler.domain;
 
+@Component
 public class Sample {
-	private static final String APP_ID = "10913858";
-	private static final String API_KEY = "cwBpVfG1D6qCgavoMk0FuDt7";
-	private static final String SECRET_KEY = "caWs7p2AFbSpV9ti7bdmTkUbW6MGp3wV";
+	@Value("${baidu.APP_ID}")
+	private static String APP_ID;
+	@Value("${baidu.API_KEY}")
+	private static String API_KEY;
+	@Value("${baidu.SECRET_KEY}")
+	private static String SECRET_KEY;
 
 	public static String getAppId() {
 		return APP_ID;
@@ -17,3 +21,4 @@ public class Sample {
 		return SECRET_KEY;
 	}
 }
+
