@@ -198,7 +198,7 @@ public class DownTianmaServiceImpl implements DownDataService {
 				}
 				// 请求关闭、发生超时或者当前线程中断，无论哪一个首先发生之后，都将导致阻塞，直到所有任务完成执行
 				// 设置最长等待10秒
-				cachedThreadPool.awaitTermination(15, TimeUnit.SECONDS);
+				cachedThreadPool.awaitTermination(15, TimeUnit.MINUTES);
 			}
 			this.writeAllCsv();
 
